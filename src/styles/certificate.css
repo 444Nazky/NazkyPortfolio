@@ -1,0 +1,41 @@
+.heading {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.heading .left {
+  color: #0ea5e9; /* primary color */
+}
+
+.heading .right {
+  color: #9333ea; /* secondary color */
+}
+.split-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.split-heading span {
+  display: block; /* pushes to next line */
+  color: #9333ea;
+}
+.divider-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.divider-heading::before,
+.divider-heading::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #e5e7eb; /* gray-200 */
+}

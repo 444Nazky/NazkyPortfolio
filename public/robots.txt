@@ -1,0 +1,6 @@
+# Allow all search engines to index everything
+User-agent: *
+Allow: /
+
+# Sitemap (optional if you have one)
+Sitemap: https://yourdomain.com/sitemap.xml

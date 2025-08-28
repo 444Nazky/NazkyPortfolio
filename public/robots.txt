@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap (optional if you have one)
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://444nazky.github.io/NazkyPortfolio/

@@ -1,0 +1,61 @@
+.link-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  backdrop-filter: blur(8px);          /* blur background behind the card */
+  -webkit-backdrop-filter: blur(8px);  /* for Safari */
+  border-radius: 0.5rem;
+
+  transition: background 0.3s;
+}
+
+/* Shine effect using pseudo-element */
+.link-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1; /* make sure shine is above background but below content */
+}
+
+/* Animate the shine on hover */
+.link-card:hover::before {
+  opacity: 1;
+  animation: shine 0.8s ease-in-out forwards;
+}
+
+/* Ensure content stays above the shine */
+.link-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Keyframes for smooth left-to-right shine */
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+.link-card:hover {
+  background: rgba(255, 255, 255, 0.2); /* slightly more opaque on hover */
+}
